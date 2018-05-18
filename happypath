@@ -1,0 +1,32 @@
+First Time Initialization for a project
+========================================
+1.  Make sure you are in the root of the project
+2.  git init
+3.  Make repo on github
+4.  copy line about git remote add origin
+
+First push
+===========
+1. git add .
+2. git commit -m 'initial commit'
+3. git push origin master
+
+Happy Path
+==========
+1. git checkout -b my_feature origin/master
+2. write some code
+3. git add .
+4. git commit -m 'my clear message'
+5. git fetch origin master
+6. git rebase origin/master
+(IF THIS WORKED CONTINUE ELSE GOTO CONFLICT)
+7. git push my_feature:master
+8. git checkout master
+9. git branch -D my_feature
+
+Conflict
+==========
+1. git status to see conflicted files
+2. open files and fix conflicts
+3. git add .
+4. git rebase --continue
